@@ -16,6 +16,10 @@ public class Main {
         // 2. Crear el objeto que contiene al otro
         Alumno alumno = new Alumno("Lucía", dir);
 
+
+        //Si el programa escribe siempre el fichero antes de leerlo, no es posible modificar manualmente el JSON.
+        // Para comprobar la persistencia, es necesario ejecutar solo la lectura sin sobrescribir el fichero.
+
         // 3. Guardar en JSON
         try (FileWriter fw = new FileWriter("alumno.json")) {
             gson.toJson(alumno, fw);

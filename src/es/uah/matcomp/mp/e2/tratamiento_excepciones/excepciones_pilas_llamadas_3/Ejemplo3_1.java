@@ -1,10 +1,9 @@
 package es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_pilas_llamadas_3;
 
-// Creamos una excepción personalizada para que sea más claro el flujo.
-class MiExcepcionEspecial extends Exception {
-    public MiExcepcionEspecial(String msg) {
+class MiExcepcion extends Exception { //se crea una excepción genérica para representar el flujo
+    public MiExcepcion(String msg) {
         super(msg);
-    }
+    } //
 }
 
 public class Ejemplo3_1 {
@@ -19,35 +18,31 @@ public class Ejemplo3_1 {
         }
     }
 
-    // methodA SÍ maneja la excepción
-    private static void methodA() throws MiExcepcionEspecial {
+    private static void methodA() throws MiExcepcion {
         System.out.println("Enter methodA()");
-        try {
+        try {  //methodA sí que maneja la excepción
             methodB();
-        } catch (MiExcepcionEspecial ex) {
+        } catch (MiExcepcion ex) {
             System.out.println("Excepción capturada en methodA(): " + ex.getMessage());
         }
-        System.out.println("Exit methodA()");
+        System.out.println("Exit methodA()"); //se retira de la pila de llamadas
     }
 
-    // methodB NO maneja la excepción → la declara
-    private static void methodB() throws MiExcepcionEspecial {
+    private static void methodB() throws MiExcepcion { //tiene que declarar la excpeción para poder compilar el programa
         System.out.println("Enter methodB()");
         methodC();
-        System.out.println("Exit methodB()"); // NO se ejecutará si methodC lanza excepción
+        System.out.println("Exit methodB()"); //se retira de la pila de llamadas
     }
 
-    // methodC NO maneja la excepción → la declara
-    private static void methodC() throws MiExcepcionEspecial {
+    private static void methodC() throws MiExcepcion { //tiene que declarar la excpeción para poder compilar el programa
         System.out.println("Enter methodC()");
         methodD();
-        System.out.println("Exit methodC()"); // NO se ejecutará
+        System.out.println("Exit methodC()"); //se retira de la pila de llamadas
     }
 
-    // methodD LANZA la excepción
-    private static void methodD() throws MiExcepcionEspecial {
+    private static void methodD() throws MiExcepcion {
         System.out.println("Enter methodD()");
-        throw new MiExcepcionEspecial("Error lanzado desde methodD()");
-        // No hay "Exit methodD()" porque la excepción interrumpe el flujo
+        throw new MiExcepcion("Error lanzado desde methodD()"); //methodD() encuentra una condición anormal y lanza una excepción
+        //no hace falta especificar que salga de la pila de llamadas porque la excepción interrumpe el flujo
     }
 }

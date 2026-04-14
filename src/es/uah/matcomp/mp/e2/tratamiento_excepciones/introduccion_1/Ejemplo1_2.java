@@ -9,10 +9,10 @@ public class Ejemplo1_2 {
     public static void run() {
         System.out.println("Ejemplo 1.2 — Scanner con try-catch");
 
-        try {
+        try { //
             Scanner in = new Scanner(new File("test.in"));
             System.out.println("Archivo encontrado y abierto correctamente.");
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) { //
             System.out.println("Archivo no encontrado.");
         }
     }

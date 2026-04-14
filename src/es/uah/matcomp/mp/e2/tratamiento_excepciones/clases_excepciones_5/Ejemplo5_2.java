@@ -5,11 +5,11 @@ public class Ejemplo5_2 {
     public static void run() {
         System.out.println("Ejemplo 5.2 — NullPointerException");
 
-        String s = null;
+        String s = null; //
 
-        try {
+        try { //
             System.out.println(s.length());
-        } catch (NullPointerException e) {
+        } catch (NullPointerException e) { //
             System.out.println("Excepción capturada: " + e);
         }
     }

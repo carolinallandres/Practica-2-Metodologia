@@ -1,8 +1,7 @@
 package es.uah.matcomp.mp.e2.tratamiento_excepciones.excepcioes_propias_6;
 
-// Excepción personalizada
-class MiExcepcionMagica extends Exception {
-    public MiExcepcionMagica(String msg) {
+class MiExcepcion extends Exception {
+    public MiExcepcion(String msg) {
         super(msg);
     }
 }
@@ -14,14 +13,14 @@ public class Ejemplo6_1 {
 
         try {
             magia(8);
-        } catch (MiExcepcionMagica e) {
+        } catch (MiExcepcion e) {
             System.out.println("Excepción capturada: " + e.getMessage());
         }
     }
 
-    private static void magia(int numero) throws MiExcepcionMagica {
+    private static void magia(int numero) throws MiExcepcion {
         if (numero == 8) {
-            throw new MiExcepcionMagica("Has encontrado el número mágico");
+            throw new MiExcepcion("Has encontrado el número mágico");
         }
         System.out.println("Número normal: " + numero);
     }

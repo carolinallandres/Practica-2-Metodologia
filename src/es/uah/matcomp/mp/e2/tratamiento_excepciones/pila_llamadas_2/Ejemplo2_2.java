@@ -13,25 +13,25 @@ public class Ejemplo2_2 {
 
     private static void mainLogic() {
         System.out.println("Enter mainLogic()");
-        methodA();
-        System.out.println("Exit mainLogic()"); // NO se ejecuta si ocurre la excepción
+        methodA(); //el main tampoco maneja la excepeción
+        System.out.println("Exit mainLogic()"); //no se ejecuta si se produce la excepción
     }
 
     private static void methodA() {
         System.out.println("Enter methodA()");
-        methodB();
-        System.out.println("Exit methodA()"); // NO se ejecuta
+        methodB(); //el métodoA tampoco maneja la excepeción
+        System.out.println("Exit methodA()"); //se retira de la pila de llamadas
     }
 
     private static void methodB() {
         System.out.println("Enter methodB()");
-        methodC();
-        System.out.println("Exit methodB()"); // NO se ejecuta
+        methodC(); //el métodoB tampoco maneja la excepeción
+        System.out.println("Exit methodB()"); //se retira de la pila de llamadas
     }
 
     private static void methodC() {
         System.out.println("Enter methodC()");
-        System.out.println(1 / 0); // Provoca ArithmeticException
-        System.out.println("Exit methodC()"); // NO se ejecuta
+        System.out.println(1 / 0); //desencadena una ArithmeticException
+        System.out.println("Exit methodC()"); //se retira de la pila de llamadas
     }
 }

@@ -2,8 +2,8 @@ package es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_pilas_llamadas_
 
 class MiExcepcion extends Exception { //creo mi propia excepción para representar el flujo, que hereda de la clase Exception
     public MiExcepcion(String msg) {
-        super(msg);
-    } //guardo el mensaje de la excepción en la clase padre (Exception)
+        super(msg); //guardo el mensaje de la excepción en la clase padre (Exception)
+    }
 }
 
 public class Ejemplo3_1 {
@@ -26,8 +26,8 @@ public class Ejemplo3_1 {
             methodB();
         }
         catch (MiExcepcion ex) { //si metodo B o C lanzan MiExcepcion, la capturo aquí
-            System.out.println("Excepción capturada en methodA(): " + ex.getMessage());
             ex.printStackTrace();
+            System.out.println("Excepción capturada en methodA(): " + ex.getMessage());
         }
         System.out.println("Exit methodA()"); //se retira de la pila de llamadas
     }

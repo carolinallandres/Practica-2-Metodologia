@@ -5,12 +5,14 @@ public class Ejemplo5_2 {
     public static void run() {
         System.out.println("Ejemplo 5.2 — NullPointerException");
 
-        String s = null; //
+        String s = null; //variable String sin inicializar
 
-        try { //
+        try { //intento usar la variable
             System.out.println(s.length());
-        } catch (NullPointerException e) { //
-            System.out.println("Excepción capturada: " + e);
+        }
+        catch (NullPointerException ex) { //la excepción NullPointerException se produce cuando intentamos usar un objeto que es nulo
+            ex.printStackTrace();
+            System.out.println("Excepción capturada: " + ex);
         }
     }
 }

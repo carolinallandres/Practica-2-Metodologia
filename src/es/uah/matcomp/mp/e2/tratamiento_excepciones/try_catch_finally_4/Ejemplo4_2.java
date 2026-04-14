@@ -7,8 +7,9 @@ public class Ejemplo4_2 {
 
         try { //
             methodA();
-        } catch (ArithmeticException e) { //
-            System.out.println("Excepción capturada en run(): " + e);
+        } catch (ArithmeticException ex) { //
+            ex.printStackTrace();
+            System.out.println("Excepción capturada en run(): " + ex);
         }
     }
 
@@ -16,9 +17,9 @@ public class Ejemplo4_2 {
         System.out.println("Enter methodA()");
         try {
             System.out.println(1 / 0); //provoca una ArithmeticException
-        } finally {
+        } finally { //se ejecuta siempre, haya o no haya excepción
             System.out.println("finally in methodA()");
         }
-        System.out.println("Exit methodA()"); //sale de la pila de llamadas
+        System.out.println("Exit methodA()"); //no se ejecuta nunca porque la excepción interrumpe el flujo
     }
 }

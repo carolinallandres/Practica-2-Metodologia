@@ -6,14 +6,11 @@ import java.io.FileNotFoundException;
 
 public class Ejemplo1_2 {
 
-    public static void run() {
-        System.out.println("Ejemplo 1.2 — Scanner con try-catch");
+    public static void run() throws FileNotFoundException {
+        //si el archivo no existe como se ha declarado throws FileNotFoundException se envía la excepción al main que es el que hace la llamada al metodo run()
+        System.out.println("Ejemplo 1.2 — Scanner con throws");
 
-        try { //
-            Scanner in = new Scanner(new File("test.in"));
-            System.out.println("Archivo encontrado y abierto correctamente.");
-        } catch (FileNotFoundException e) { //
-            System.out.println("Archivo no encontrado.");
-        }
+        Scanner in = new Scanner(new File("test.in")); //se intenta abrir el archivo directamente sin utilizar try...catch
+        System.out.println("Archivo abierto correctamente (si no existe, la excepción se propagará).");
     }
 }

@@ -1,12 +1,6 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_propias_6;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-class MiExcepcion extends Exception { //creo mi propia excepción personalizada, que hereda de Exception
-    public MiExcepcion(String msg) {
-        super(msg); //guardo el mensaje de la excepción en la clase padre (Exception)
-    }
-}
-
-public class Ejemplo6_1 {
+public class Ejemplo8_1 {
 
     public static void run() {
         System.out.println("Ejemplo 6.1 — Excepción personalizada");

@@ -1,6 +1,6 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.clases_excepciones_5;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-public class Ejemplo5_3 {
+public class Ejemplo7_3 {
 
     public static void run() {
         System.out.println("Ejemplo 5.3 — NumberFormatException");

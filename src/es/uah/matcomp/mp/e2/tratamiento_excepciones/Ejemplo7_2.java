@@ -1,6 +1,6 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.clases_excepciones_5;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-public class Ejemplo5_2 {
+public class Ejemplo7_2 {
 
     public static void run() {
         System.out.println("Ejemplo 5.2 — NullPointerException");

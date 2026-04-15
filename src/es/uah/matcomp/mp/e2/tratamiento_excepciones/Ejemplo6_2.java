@@ -1,11 +1,10 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.try_catch_finally_4;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-public class Ejemplo4_2 {
+public class Ejemplo6_2 {
 
     public static void run() {
         System.out.println("Ejemplo 4.2 — finally ejecutándose aunque haya excepción");
-
-        try { //
+        try {
             methodA();
         } catch (ArithmeticException ex) { //
             ex.printStackTrace();

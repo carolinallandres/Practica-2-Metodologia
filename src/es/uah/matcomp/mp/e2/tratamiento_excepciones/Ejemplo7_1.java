@@ -1,6 +1,6 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.clases_excepciones_5;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-public class Ejemplo5_1 {
+public class Ejemplo7_1 {
 
     public static void run() {
         System.out.println("Ejemplo 5.1 — ArrayIndexOutOfBoundsException");

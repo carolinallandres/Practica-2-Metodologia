@@ -1,16 +1,9 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_pilas_llamadas_3;
-
-class MiExcepcion extends Exception { //creo mi propia excepción para representar el flujo, que hereda de la clase Exception
-    public MiExcepcion(String msg) {
-        super(msg); //guardo el mensaje de la excepción en la clase padre (Exception)
-    }
-}
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
 public class Ejemplo3_1 {
 
     public static void run() {
         System.out.println("Ejemplo 3.1 — Propagación de excepciones");
-
         try { //intenta ejecutar el metodo A
             methodA();
         }

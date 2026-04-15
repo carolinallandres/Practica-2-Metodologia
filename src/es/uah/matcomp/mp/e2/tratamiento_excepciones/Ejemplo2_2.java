@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.pila_llamadas_2;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
 public class Ejemplo2_2 {
 

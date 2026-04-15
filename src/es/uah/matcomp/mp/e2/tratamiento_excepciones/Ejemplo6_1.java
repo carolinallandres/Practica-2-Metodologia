@@ -1,10 +1,10 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.try_catch_finally_4;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Ejemplo4_1 {
+public class Ejemplo6_1 {
 
     public static void run() {
         System.out.println("Ejemplo 4.1 — try-catch-finally");

@@ -1,4 +1,4 @@
-package es.uah.matcomp.mp.e2.tratamiento_excepciones.introduccion_1;
+package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
 import java.util.Scanner;
 import java.io.File;

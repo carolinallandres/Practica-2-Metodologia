@@ -1,5 +1,9 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejemplo2;
 
+//programa principal que pueda recibir parámetros desde la línea de comandos: <operacion> y <fichero>
+// <operación> “init” y “show”: “init” crea un fichero con valores y “show” lee un fichero cargando los datos en los objetos correspondientes y muestra sus valores
+//<fichero> es la ruta de fichero a cargar/crear
+
 import com.google.gson.Gson;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -48,3 +52,6 @@ public class Main {
         }
     }
 }
+
+//al ejecutar java -jar TuFichero.jar Hola Mundo Cruel, el programa recibe tres argumentos distintos, porque se separan los argumentos por espacios
+//al ejecutar java -jar TuFichero.jar "Hola Mundo Cruel", el programa recibe un único argumento, ya que las comillas hace que se trate el texto como un solo parametro

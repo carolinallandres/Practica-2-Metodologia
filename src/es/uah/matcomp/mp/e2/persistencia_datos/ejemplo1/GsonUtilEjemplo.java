@@ -1,5 +1,7 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejemplo1;
 
+//ejemplo compacto de almacenamiento y carga de fichero
+
 import com.google.gson.Gson;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -62,3 +64,8 @@ public class GsonUtilEjemplo {
         // Getters y setters no incluidos por simplicidad.
     }
 }
+
+//se utilizan tantos métodos estáticos porque en ningún momento se crea un objeto, y así pueden ser llamados directamente sin la necesidad de crearlo
+
+//el archivo JSON se guarda por defecto en la carpeta out del programa que se ejecuta
+//en este caso, una vez modificado el orden para que la estructura quede más limpia, el archivo se guarda en la propia carpeta del ejemplo en el que estamos

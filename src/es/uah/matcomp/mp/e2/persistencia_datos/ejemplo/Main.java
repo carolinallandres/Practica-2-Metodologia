@@ -1,5 +1,7 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejemplo;
 
+//ejemplo que sirve para comprobar cómo se almacenan los datos
+
 import com.google.gson.Gson;
 
 public class Main {

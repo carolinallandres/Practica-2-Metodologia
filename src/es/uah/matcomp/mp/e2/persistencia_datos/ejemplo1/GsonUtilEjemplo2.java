@@ -1,5 +1,7 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejemplo1;
 
+//modificación del fichero JSON del ejemplo anterior donde el main sólo lee el fichero
+
 import com.google.gson.Gson;
 
 import java.io.FileReader;
@@ -59,3 +61,5 @@ public class GsonUtilEjemplo2 {
         // Getters y setters no incluidos por simplicidad.
     }
 }
+
+//si modifico manualmente el fichero JSON y luego ejecuto el programa, la salida del programa sí que cambia porque Gson lee exactamente lo que hay escrito en el archivo

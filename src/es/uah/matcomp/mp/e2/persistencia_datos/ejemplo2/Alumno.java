@@ -1,5 +1,7 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejemplo2;
 
+//programar una clase de datos de alumno, con los atributos que consideres.
+
 public class Alumno {
     //Atributos
     private String nombre;

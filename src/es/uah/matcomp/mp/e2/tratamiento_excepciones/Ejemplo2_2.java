@@ -14,7 +14,7 @@ public class Ejemplo2_2 {
 
     private static void mainLogic() {
         System.out.println("Enter mainLogic()");
-        methodA(); //el programa principal no maneja la excepeción y llama al A después de entrar en la pila
+        methodA(); //el programa principal no maneja la excepción y llama al A después de entrar en la pila
         System.out.println("Exit mainLogic()"); //no se ejecuta si se produce la excepción
     }
 

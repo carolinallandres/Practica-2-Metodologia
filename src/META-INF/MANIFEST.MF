@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: es.uah.matcomp.mp.e2.persistencia_datos.ejemplo2.Main_inits_
+ how
+

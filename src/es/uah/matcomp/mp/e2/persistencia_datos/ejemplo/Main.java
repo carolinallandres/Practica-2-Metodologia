@@ -4,9 +4,13 @@ import com.google.gson.Gson;
 
 public class Main {
     public static void main(String[] args) {
-        Gson gson = new Gson();
-        Persona p = new Persona("Antonio Moratilla",97);
-        String json = gson.toJson(p);
-        System.out.println(json);
+
+        Gson gson = new Gson(); //se crea un objeto Gson que va permitir la conversión de JSON a Java y viceversa
+
+        Persona p = new Persona("Antonio Moratilla", 97); //se crea un objeto Persona con atributos, el cual se convertirá a JSON
+
+        String json = gson.toJson(p); //toJson() recibe un objeto y devuelve su representación en formato JSON
+
+        System.out.println(json); //se muestra el JSON generado por pantalla
     }
 }

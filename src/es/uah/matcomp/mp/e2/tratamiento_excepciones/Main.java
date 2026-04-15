@@ -1,7 +1,7 @@
 package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
 import es.uah.matcomp.mp.e2.tratamiento_excepciones.clases_excepciones_5.*;
-import es.uah.matcomp.mp.e2.tratamiento_excepciones.excepcioes_propias_6.Ejemplo6_1;
+import es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_propias_6.Ejemplo6_1;
 import es.uah.matcomp.mp.e2.tratamiento_excepciones.excepciones_pilas_llamadas_3.Ejemplo3_1;
 import es.uah.matcomp.mp.e2.tratamiento_excepciones.introduccion_1.Ejemplo1_1;
 import es.uah.matcomp.mp.e2.tratamiento_excepciones.introduccion_1.Ejemplo1_2;
@@ -22,7 +22,7 @@ public class Main {
         }
         catch (Exception ex) {
             ex.printStackTrace();
-            System.out.println("Ejemplo 1.3 lanzó excepción: " + ex);
+            System.out.println("Ejemplo 1.2 lanzó excepción: " + ex);
         }
         salto();
 

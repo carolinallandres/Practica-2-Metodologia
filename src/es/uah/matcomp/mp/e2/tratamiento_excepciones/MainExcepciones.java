@@ -7,6 +7,7 @@ public class MainExcepciones {
         Ejemplo1_1.run();
         salto();
 
+        
         try { //como habíamos usado un throws en el ejemplo 1_2, la excepción se ejecuta aquí
             Ejemplo1_2.run();
         }
@@ -28,15 +29,19 @@ public class MainExcepciones {
         Ejemplo3_1.run();
         salto();
 
+        
         Ejemplo4_1.run();
         salto();
 
+        
         Ejemplo4_2.run();
         salto();
 
+        
         Ejemplo5_1.run();
         salto();
 
+        
         Ejemplo6_1.run();
         salto();
 
@@ -60,6 +65,7 @@ public class MainExcepciones {
         Ejemplo7_4.run();
         salto();
 
+        
         Ejemplo7_5.run();
         salto();
 
@@ -67,6 +73,7 @@ public class MainExcepciones {
         Ejemplo8_1.run();
         salto();
 
+        
         Ejemplo8_2.run();
         salto();
     }

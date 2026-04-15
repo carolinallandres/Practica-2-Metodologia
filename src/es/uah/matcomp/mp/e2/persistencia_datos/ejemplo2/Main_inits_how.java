@@ -25,7 +25,7 @@ public class Main_inits_how {
 
         if (operacion.equals("init")) { //si la operación es "init", se crea un archivo JSON con un Alumno por defecto
 
-            Alumno a = new Alumno("Ariadna", 19, 10); //se crea un alumno con atributos para guardar en el archivo
+            Alumno a = new Alumno("Carolina", 20, 10); //se crea un alumno con atributos para guardar en el archivo
 
             try (FileWriter fw = new FileWriter(fichero)) { //intenta abrir o crear un archivo para escribir en él
                 gson.toJson(a, fw);  //se convierte el objeto a JSON y se guarda

@@ -58,6 +58,6 @@ public class Main {
     }
 
     private static void salto() {
-        System.out.println("\n----------------------------------------\n");
+        System.out.println("\n---------------------------------------\n");
     }
 }

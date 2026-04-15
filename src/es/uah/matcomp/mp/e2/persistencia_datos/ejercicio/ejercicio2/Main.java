@@ -8,33 +8,30 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
 
-        Gson gson = new Gson();
+        Gson gson = new Gson(); //se crea el objeto que se va a convertir a JSON y viceversa
 
-        // 1. Crear el objeto interno
-        Direccion dir = new Direccion("Mayor", 12);
+        Direccion dir = new Direccion("Mayor", 12); //se crea un objeto con atributos
 
-        // 2. Crear el objeto que contiene al otro
-        Alumno alumno = new Alumno("Lucía", dir);
+        Alumno alumno = new Alumno("Lucía", dir); //se crea un objeto con otro objeto dentro
 
-
-        //Si el programa escribe siempre el fichero antes de leerlo, no es posible modificar manualmente el JSON.
-        // Para comprobar la persistencia, es necesario ejecutar solo la lectura sin sobrescribir el fichero.
-
-        // 3. Guardar en JSON
-        try (FileWriter fw = new FileWriter("alumno.json")) {
-            gson.toJson(alumno, fw);
+        try (FileWriter fw = new FileWriter("alumno.json")) { //intentar abrir o crear un archivo para escribir en él
+            gson.toJson(alumno, fw);  //se convierte el objeto en JSON
             System.out.println("Alumno guardado en alumno.json");
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
-        // 4. Cargar desde JSON
-        try (FileReader fr = new FileReader("alumno.json")) {
-            Alumno cargado = gson.fromJson(fr, Alumno.class);
+        try (FileReader fr = new FileReader("alumno.json")) { //intenta abrir un archivo para leer lo que hay en él
+            Alumno cargado = gson.fromJson(fr, Alumno.class); //convierte el archivo JSON en objeto
             System.out.println("Alumno cargado desde JSON:");
-            System.out.println(gson.toJson(cargado)); // Mostrarlo bonito
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            System.out.println(gson.toJson(cargado)); //se muestra el objeto en formato JSON
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
     }
 }
+
+//cuando un objeto contiene otros objetos, el archivo JSON también contiene esos objetos internos como estructuras JSON anidadas

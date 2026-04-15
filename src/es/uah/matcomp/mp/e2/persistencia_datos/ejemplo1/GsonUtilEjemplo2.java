@@ -13,8 +13,8 @@ public class GsonUtilEjemplo2 {
     // Metodo genérico para guardar cualquier objeto en un archivo JSON.
     public static <T> void guardarObjetoEnArchivo(String rutaArchivo, T objeto) { //recibe la ruta del archivo y el objeto que queremos guardar.
         Gson gson = new Gson();
-        try (FileWriter writer = new FileWriter(rutaArchivo)) { //intenta crear o abrir un archivo para escribir en él
-            gson.toJson(objeto, writer);  //se convierte el objeto a JSON y lo guardamos
+        try (FileWriter fw = new FileWriter(rutaArchivo)) { //intenta crear o abrir un archivo para escribir en él
+            gson.toJson(objeto, fw);  //se convierte el objeto a JSON y lo guardamos
         }
         catch (IOException ex) { //la excepción IOException se produce cuando hay un problema en la entrada o salida de datos
             ex.printStackTrace();
@@ -24,8 +24,8 @@ public class GsonUtilEjemplo2 {
     // Metodo genérico para cargar un objeto desde un archivo JSON.
     public static <T> T cargarObjetoDesdeArchivo(String rutaArchivo, Class<T> clase) { //recibe la ruta del archivo y la clase del objeto que queremos reconstruir.
         Gson gson = new Gson();
-        try (FileReader reader = new FileReader(rutaArchivo)) { //intenta abrir un archivo para leer lo que hay en él
-            return gson.fromJson(reader, clase); //se convierte el JSON en un objeto Java
+        try (FileReader fr = new FileReader(rutaArchivo)) { //intenta abrir un archivo para leer lo que hay en él
+            return gson.fromJson(fr, clase); //se convierte el JSON en un objeto Java
         }
         catch (IOException ex) {
             ex.printStackTrace();

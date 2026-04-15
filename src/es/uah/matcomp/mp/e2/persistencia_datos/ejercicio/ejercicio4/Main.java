@@ -9,31 +9,33 @@ import es.uah.matcomp.mp.e2.persistencia_datos.ejercicio.ejercicio4.necesario.Li
 public class Main {
     public static void main(String[] args) {
 
-        Gson gson = new Gson();
+        Gson gson = new Gson(); //se crea el objeto que se va a convertir a JSON y viceversa
 
-        // Crear lista personalizada
-        ListSE<Estudiante> lista = new ListSE<>();
-        lista.add(new Estudiante("Ana", 20));
-        lista.add(new Estudiante("Luis", 21));
+        ListSE<Estudiante> lista = new ListSE<>(); //se crea una lista auxiliar donde almacenar los objetos
+        lista.add(new Estudiante("Ana", 20)); //se añade un objeto con atributos a la lista auxiliar
+        lista.add(new Estudiante("Luis", 21)); //se añade otro objeto con atributos a la lista auxiliar
 
-        // Crear asignatura
-        Asignatura asignatura = new Asignatura("Matemáticas", lista);
+        Asignatura asignatura = new Asignatura("Matemáticas", lista);  //se crea un objeto con una lista dentro
 
-        // Guardar JSON
-        try (FileWriter fw = new FileWriter("asignatura.json")) {
-            gson.toJson(asignatura, fw);
+        try (FileWriter fw = new FileWriter("asignatura.json")) { //intentar abrir o crear un archivo para escribir en él
+            gson.toJson(asignatura, fw); //convierte el archivo JSON en objeto
             System.out.println("Asignatura guardada.");
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
-        // Cargar JSON
-        try (FileReader fr = new FileReader("asignatura.json")) {
-            Asignatura cargada = gson.fromJson(fr, Asignatura.class);
+        try (FileReader fr = new FileReader("asignatura.json")) { //intenta abrir un archivo para leer lo que hay en él
+            Asignatura cargada = gson.fromJson(fr, Asignatura.class); //convierte el archivo JSON en objeto
             System.out.println("Asignatura cargada:");
-            System.out.println(gson.toJson(cargada));
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            System.out.println(gson.toJson(cargada)); //se muestra el objeto en formato JSON
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
     }
 }
+
+//el archivo JSON contiene un objeto principal que es la asignatura y dentro una lista JSON con los objetos estudiante
+//si modifico manualmente los alumnos dentro del archivo JSON, cuando lo cargo otra vez obtengo nuevos objetos con los datos actualizados y una lista actualizada

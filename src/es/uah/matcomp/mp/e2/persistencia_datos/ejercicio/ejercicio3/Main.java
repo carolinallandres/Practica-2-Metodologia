@@ -9,48 +9,51 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Gson gson = new Gson();
+        Gson gson = new Gson(); //se crea el objeto que se va a convertir a JSON y viceversa
 
-        // ------------------------------------
-        // 1. ARRAY SUELTO (va aquí, en el main)
-        // ------------------------------------
-        int[] numeros = {1, 2, 3, 4, 5};
+        int[] numeros = {1, 2, 3, 4, 5}; //array suelto
 
-        try (FileWriter fw = new FileWriter("numeros.json")) {
-            gson.toJson(numeros, fw);
+        try (FileWriter fw = new FileWriter("numeros.json")) { //intentar abrir o crear un archivo para escribir en él
+            gson.toJson(numeros, fw); //se convierte el objeto en JSON
             System.out.println("Array suelto guardado en numeros.json");
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
-        // Cargar array suelto
-        try (FileReader fr = new FileReader("numeros.json")) {
-            int[] cargado = gson.fromJson(fr, int[].class);
-            System.out.println("Array suelto cargado: " + Arrays.toString(cargado));
-        } catch (IOException e) {
-            e.printStackTrace();
+        try (FileReader fr = new FileReader("numeros.json")) { //intenta abrir un archivo para leer lo que hay en él
+            int[] cargado = gson.fromJson(fr, int[].class); //convierte el archivo JSON en objeto
+            System.out.println("Array suelto cargado: ");
+
+            System.out.println(Arrays.toString(cargado)); //se muestra el objeto en formato JSON
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
 
-        // ------------------------------------
-        // 2. ARRAY DENTRO DE UN OBJETO
-        // ------------------------------------
-        Grupo grupo = new Grupo("Grupo A", new int[]{5, 7, 9});
+        Grupo grupo = new Grupo("Grupo A", new int[]{5, 7, 9}); //array dentro de un objeto
 
-        try (FileWriter fw = new FileWriter("grupo.json")) {
-            gson.toJson(grupo, fw);
+        try (FileWriter fw = new FileWriter("grupo.json")) { //intentar abrir o crear un archivo para escribir en él
+            gson.toJson(grupo, fw); //se convierte el objeto en JSON
             System.out.println("Grupo guardado en grupo.json");
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
-        // Cargar objeto con array
-        try (FileReader fr = new FileReader("grupo.json")) {
-            Grupo cargado = gson.fromJson(fr, Grupo.class);
+
+        try (FileReader fr = new FileReader("grupo.json")) { //intenta abrir un archivo para leer lo que hay en él
+            Grupo cargado = gson.fromJson(fr, Grupo.class); //convierte el archivo JSON en objeto
             System.out.println("Grupo cargado:");
-            System.out.println(gson.toJson(cargado));
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            System.out.println(gson.toJson(cargado)); //se muestra el objeto en formato JSON
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
     }
 }
+
+//si el array se guarda suelto se convierte en una lista JSON
+//si el array está dentro de un objeto, Gson crea como un array JSON anidado dentro del objeto en el que está el array

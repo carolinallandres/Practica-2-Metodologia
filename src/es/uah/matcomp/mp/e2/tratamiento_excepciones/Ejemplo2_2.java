@@ -9,6 +9,7 @@ public class Ejemplo2_2 {
         }
         catch (ArithmeticException ex) { //se ejecuta si hay una excepción de tipo aritmética
             ex.printStackTrace(); //muestra la traza completa de la excepción
+            System.out.println("No puedes dividir por cero");
         }
     }
 

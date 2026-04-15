@@ -3,7 +3,7 @@ package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 public class Ejemplo8_1 {
 
     public static void run() {
-        System.out.println("Ejemplo 6.1 — Excepción personalizada");
+        System.out.println("Ejemplo 8.1 — Excepción personalizada");
 
         try {
             magia(8); //llamo al metodo que puede lanzar mi excepción

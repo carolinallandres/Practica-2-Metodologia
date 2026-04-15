@@ -1,13 +1,13 @@
 package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 
-import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Ejemplo6_1 {
 
     public static void run() {
-        System.out.println("Ejemplo 4.1 — try-catch-finally");
+        System.out.println("Ejemplo 6.1 — try-catch-finally");
 
         try { //intento ejecutar este bloque pero aquí puede haber excepciones
             System.out.println("Start of the main logic");

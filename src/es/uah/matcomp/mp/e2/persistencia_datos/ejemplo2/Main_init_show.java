@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main_inits_how {
+public class Main_init_show {
 
     public static void main(String[] args) {
 

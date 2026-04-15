@@ -3,7 +3,7 @@ package es.uah.matcomp.mp.e2.tratamiento_excepciones;
 public class Ejemplo7_2 {
 
     public static void run() {
-        System.out.println("Ejemplo 5.2 — NullPointerException");
+        System.out.println("Ejemplo 7.2 — NullPointerException");
 
         String s = null; //variable String sin inicializar
 

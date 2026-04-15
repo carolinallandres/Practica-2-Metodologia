@@ -27,6 +27,11 @@ public class Ejemplo2_1 {
 
     private static void methodC() {
         System.out.println("Enter methodC()"); //el metodo C se mete en la pila
+        int n = 5;
+        int m = 1;
+        int division = n/m;
+
+        System.out.println("El resultado es:" + division);
         System.out.println("Exit methodC()"); //el metodo C sale de la pila siguiendo el sistema LIFO, y análogamente el B, el A y el principal
     }
 }

@@ -14,13 +14,15 @@ public class Main {
 
         Alumno alumno = new Alumno("Lucía", dir); //se crea un objeto con otro objeto dentro
 
-        try (FileWriter fw = new FileWriter("alumno.json")) { //intentar abrir o crear un archivo para escribir en él
+
+        try (FileWriter fw = new FileWriter("alumno.json")) { //intenta abrir o crear un archivo para escribir en él
             gson.toJson(alumno, fw);  //se convierte el objeto en JSON
             System.out.println("Alumno guardado en alumno.json");
         }
         catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
             ex.printStackTrace();
         }
+
 
         try (FileReader fr = new FileReader("alumno.json")) { //intenta abrir un archivo para leer lo que hay en él
             Alumno cargado = gson.fromJson(fr, Alumno.class); //convierte el archivo JSON en objeto

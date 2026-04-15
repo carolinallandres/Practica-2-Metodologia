@@ -1,12 +1,12 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejercicio.ejercicio1.practica_a;
 
 public class Rectangle {
-
     //Atributos
     private float length;
     private float width;
 
-    //Valores por defecto de los atributos
+
+    //Constructores
     public Rectangle() {
         this.length = 1.0f;
         this.width = 1.0f;
@@ -17,34 +17,35 @@ public class Rectangle {
         this.width = width;
     }
 
-    //Getters y Setters para los valores de ancho y largo del rectángulo
-    public float getLength() {
+
+    //Métodos básicos
+    public float getLength() { //devuelve el largo
         return length;
     }
 
-    public void setLength(float length) {
+    public void setLength(float length) { //modifica el valor del largo
         this.length = length;
     }
 
-    public float getWidth() {
+    public float getWidth() { //devuelve el ancho
         return width;
     }
 
-    public void setWidth(float width) {
+    public void setWidth(float width) { //modifica el valor del ancho
         this.width = width;
     }
 
-    //Cálculo del área del rectángulo
-    public double getArea() {
+    public double getArea() { //devuelve el área del rectángulo
         return length*width;
     }
 
-    //Cálculo del perimetro del rectángulo
-    public double getPerimeter() {
+    public double getPerimeter() { //devuelve el perímetro del rectángulo
         return 2*length+2*width;
     }
 
-    public String toString() {
+
+    //Métodos con función
+    public String toString() { //devuelve el objeto con sus atributos
         return "Rectangle[length=" + length + "width=" + width + "]";
     }
 }

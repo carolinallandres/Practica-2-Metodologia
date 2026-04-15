@@ -9,39 +9,33 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Gson gson = new Gson();
+        Gson gson = new Gson(); //se crea el objeto que se va a convertir a JSON y viceversa
 
-        // -------------------------
-        // CREAR OBJETO STAFF
-        // -------------------------
-        Staff staff = new Staff(
+        Staff staff = new Staff( //se crea un objeto con atributos
                 "Juan",
                 "Barcelona",
                 "IES Example",
                 1200.5
         );
 
-        // -------------------------
-        // GUARDAR EN JSON
-        // -------------------------
-        try (FileWriter fw = new FileWriter("staff.json")) {
-            gson.toJson(staff, fw);
+
+        try (FileWriter fw = new FileWriter("staff.json")) { //intenta abrir o crear un archivo para escribir en él
+            gson.toJson(staff, fw); //se convierte el objeto en JSON
             System.out.println("Staff guardado en JSON");
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
 
-        // -------------------------
-        // LEER DESDE JSON
-        // -------------------------
-        try (FileReader fr = new FileReader("staff.json")) {
-            Staff loadedStaff = gson.fromJson(fr, Staff.class);
 
+        try (FileReader fr = new FileReader("staff.json")) { //intenta abrir un archivo para leer lo que hay en él
+            Staff loadedStaff = gson.fromJson(fr, Staff.class); //convierte el archivo JSON en objeto
             System.out.println("Staff cargado:");
-            System.out.println(gson.toJson(loadedStaff));
 
-        } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println(gson.toJson(loadedStaff)); //se muestra el objeto en formato JSON
+        }
+        catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
+            ex.printStackTrace();
         }
     }
 }

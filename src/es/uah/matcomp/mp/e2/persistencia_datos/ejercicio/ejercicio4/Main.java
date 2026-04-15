@@ -17,6 +17,7 @@ public class Main {
 
         Asignatura asignatura = new Asignatura("Matemáticas", lista);  //se crea un objeto con una lista dentro
 
+
         try (FileWriter fw = new FileWriter("asignatura.json")) { //intentar abrir o crear un archivo para escribir en él
             gson.toJson(asignatura, fw); //convierte el archivo JSON en objeto
             System.out.println("Asignatura guardada.");
@@ -24,6 +25,7 @@ public class Main {
         catch (IOException ex) { //si encuentra un error en la lectura o escritura del archivo se lanza una excepción
             ex.printStackTrace();
         }
+
 
         try (FileReader fr = new FileReader("asignatura.json")) { //intenta abrir un archivo para leer lo que hay en él
             Asignatura cargada = gson.fromJson(fr, Asignatura.class); //convierte el archivo JSON en objeto

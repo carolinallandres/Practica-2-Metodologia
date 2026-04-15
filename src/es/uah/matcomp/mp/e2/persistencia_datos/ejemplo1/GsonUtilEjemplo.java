@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class GsonUtilEjemplo {
 
-    // Metodo genérico para guardar cualquier objeto en un archivo JSON.
+    //Metodo genérico para guardar cualquier objeto en un archivo JSON.
     public static <T> void guardarObjetoEnArchivo(String rutaArchivo, T objeto) { //recibe la ruta del archivo y el objeto que queremos guardar.
         Gson gson = new Gson();
         try (FileWriter fw = new FileWriter(rutaArchivo)) { //intenta crear o abrir un archivo para escribir en él
@@ -20,7 +20,8 @@ public class GsonUtilEjemplo {
         }
     }
 
-    // Metodo genérico para cargar un objeto desde un archivo JSON.
+
+    //Metodo genérico para cargar un objeto desde un archivo JSON.
     public static <T> T cargarObjetoDesdeArchivo(String rutaArchivo, Class<T> clase) { //recibe la ruta del archivo y la clase del objeto que queremos reconstruir.
         Gson gson = new Gson();
         try (FileReader fr = new FileReader(rutaArchivo)) { //intenta abrir un archivo para leer lo que hay en él
@@ -31,6 +32,7 @@ public class GsonUtilEjemplo {
             return null; //si hay una excepción, se devuelve null
         }
     }
+
 
     public static void main(String[] args) {
 
@@ -47,7 +49,8 @@ public class GsonUtilEjemplo {
         }
     }
 
-    // Clase interna Usuario usada solo para este ejemplo.
+
+    //Clase interna Usuario usada solo para este ejemplo.
     static class Usuario {
         //Atributos
         String nombre;
@@ -61,7 +64,7 @@ public class GsonUtilEjemplo {
             this.correo = correo;
         }
 
-        // Getters y setters no incluidos por simplicidad.
+        //Getters y setters no incluidos por simplicidad.
     }
 }
 

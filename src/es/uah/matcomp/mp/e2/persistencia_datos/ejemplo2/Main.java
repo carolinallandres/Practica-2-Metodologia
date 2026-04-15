@@ -37,6 +37,7 @@ public class Main {
         }
 
         else if (operacion.equals("show")) { //si la operación es "show", leemos el archivo JSON y mostramos su contenido
+
             try (FileReader fr = new FileReader(fichero)) { //intenta abrir un archivo para leer lo que hay en él
                 Alumno a = gson.fromJson(fr, Alumno.class); //convierte el archivo JSON en objeto Java
                 System.out.println(a); //se muestra el alumno que se ha leído

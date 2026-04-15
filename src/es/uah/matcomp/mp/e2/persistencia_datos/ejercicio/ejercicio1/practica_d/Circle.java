@@ -1,27 +1,28 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejercicio.ejercicio1.practica_d;
 
 public class Circle implements GeometricObject {
+    //Atributos
     protected double radius;
 
-    //CONSTRUCTORES
 
+    //Constructor
     public Circle(double radius) {
         this.radius = radius;
     }
 
-    //MÉTODOS
 
-    public String toString() {
+    //Métodos con función
+    public String toString() { //devuelve el objeto con sus atributos
         return "Circle=[radius=" + radius + "]";
     }
 
     @Override
-    public double getArea(){    //Devuelve el área del círculo
+    public double getArea(){ //devuelve el área del círculo utilizando la interfaz
         return Math.PI*radius*radius;
     }
 
     @Override
-    public double getPerimeter(){   //Devuelve el perimetro del círculo
+    public double getPerimeter(){ //devuelve la longitud de la circunferencia utilizando la interfaz
         return 2*Math.PI*radius;
     }
 }

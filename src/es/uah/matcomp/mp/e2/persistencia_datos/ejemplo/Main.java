@@ -11,7 +11,7 @@ public class Main {
 
         Persona p = new Persona("Antonio Moratilla", 97); //se crea un objeto Persona con atributos, el cual se convertirá a JSON
 
-        String json = gson.toJson(p); //toJson recibe un objeto y devuelve su representación en formato JSON
+        String json = gson.toJson(p); //recibe un objeto y devuelve su representación en formato JSON
 
         System.out.println(json); //se muestra el JSON generado por pantalla
     }

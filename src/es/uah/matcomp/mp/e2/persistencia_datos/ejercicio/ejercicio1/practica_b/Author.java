@@ -1,35 +1,34 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejercicio.ejercicio1.practica_b;
 
 public class Author {
+    //Atributos
     private String name;
     private String email;
 
-    //CONSTRUCTORES
 
+    //Constructores
     public Author (String name,String email){
         this.name=name;
         this.email=email;
     }
 
-    //GETTERS
 
-    public String getName() {
+    //Métodos básicos
+    public String getName() { //devuelve el nombre
         return name;
     }
 
-    public String getEmail() {
+    public String getEmail() { //devuelve el email
         return email;
     }
 
-    //SETTERS
-
-    public void setEmail(String email){
+    public void setEmail(String email){ //modifica el valor del email
         this.email=email;
     }
 
-    //MÉTODOS
 
-    public String toString(){
+    //Métodos con función
+    public String toString(){ //devuelve el objeto con sus atributos
         return "Author[name="+name+",email="+email+"]";
     }
 }

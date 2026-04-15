@@ -1,14 +1,13 @@
 package es.uah.matcomp.mp.e2.persistencia_datos.ejercicio.ejercicio1.practica_c;
 
 public class Staff extends Person {
-
     //Atributos
     private String school;
     private double pay;
 
 
     //Constructores
-    public Staff(String name, String address, String school, double pay) { //llama al constructor por defecto de la persona para el nombre y la dirección e inicializa el colegio y el pago
+    public Staff(String name, String address, String school, double pay) {
         super(name, address);
         this.school = school;
         this.pay = pay;
